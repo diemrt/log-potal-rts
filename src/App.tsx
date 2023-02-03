@@ -1,11 +1,12 @@
 import React from 'react';
-import useSayHi from './useSayHi';
+import Dashboard from './pages/Dashboard';
 
-function App(props: {name: string}) {
-  const hi = useSayHi(props.name);
+function App() {
 
   return (
-    <h1>{hi}</h1>
+    <div className='container p-4'>
+      <Dashboard />
+    </div>
   );
 }
 
