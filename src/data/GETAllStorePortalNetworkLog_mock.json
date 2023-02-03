@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "id": "<guid>",
+            "user": {
+                "id": "<guid>",
+                "name": ""
+            },
+            "http": {
+                "status": 200,
+                "method": "GET",
+                "url": "http://localhost:5000/api/v2/storeportal?name=boh",
+                "request": "<json>",
+                "response": "<json>"
+            }
+        }
+    ],
+    "page": 1,
+    "pages": 15,
+    "count": 233
+}
