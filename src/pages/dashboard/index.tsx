@@ -8,7 +8,7 @@ function Dashboard(){
     const [logs, setLogs] = useState<GetAllStorePortalNetworkLogs>();
     useEffect(() => {
         GETAllStorePortalNetworkLog(setLogs);
-    });
+    }, []);
 
     return (
         <div className="container p-2">
