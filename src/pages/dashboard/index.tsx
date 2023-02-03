@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GetAllStorePortalNetworkLogs } from "./DashboardTypes";
-import Logs from "./Logs";
-import Search from "./Search";
+import DashboardLogs from "./DashboardLogs";
+import DashboardSearch from "./DashboardSearch";
 
 function Dashboard(){
     const [logs, setLogs] = useState<GetAllStorePortalNetworkLogs>();
@@ -9,10 +9,10 @@ function Dashboard(){
     return (
         <div className="container p-2">
             <div className="row mb-4">
-                <Search />
+                <DashboardSearch />
             </div>
             <div className="row">
-                <Logs data={logs?.data}/>
+                <DashboardLogs data={logs?.data}/>
             </div>
         </div>
     );
