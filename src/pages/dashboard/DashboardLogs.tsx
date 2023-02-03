@@ -4,7 +4,7 @@ import DashboardLogsLoading from "./DashboardLogsLoading";
 
 export default function DashboardLogs(props: LogsProps){
 
-    //if(props.data !== undefined) {
+    if(props.data !== undefined) {
         return (
             <table className="table table-striped">
                 <thead>
@@ -26,6 +26,6 @@ export default function DashboardLogs(props: LogsProps){
             </table>
             
         );
-    //}
-    //return <DashboardLogsLoading />;
+    }
+    return <DashboardLogsLoading />;
 }
