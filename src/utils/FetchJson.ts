@@ -1,5 +1,5 @@
 import React from "react";
-import { MultipleResponseType } from "../types/ApiResponse";
+import { MultipleResponseType } from "../types/ApiResponse.Type";
 import { GenericItem } from "../types/Common.Type";
 
 export function GETAllStorePortalNetworkLog(setHook: React.Dispatch<React.SetStateAction<MultipleResponseType<GenericItem> | undefined>>) {
