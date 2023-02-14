@@ -1,7 +1,7 @@
 import SidebarProductSelect from "./SidebarProductSelect.Component";
 import { SidebarProps } from "./SiedbarProps.Type";
 
-export default function SidebarHeader(pros: SidebarProps){
+export default function SidebarHeader(props: SidebarProps){
 
     return (
         <div className="flex flex-col gap-12">
@@ -11,7 +11,7 @@ export default function SidebarHeader(pros: SidebarProps){
             </div>
             <div className="flex flex-col gap-5">
                 <label className="text-slate-700 text-xs font-bold">PRODOTTO</label>
-                <SidebarProductSelect />
+                <SidebarProductSelect {...props} />
             </div>
         </div>
     );

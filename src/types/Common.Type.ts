@@ -4,6 +4,5 @@ export type GenericItem = {
 }
 export type Product = {
     name: string,
-    apiRoute: string,
-    isCurrent: boolean
+    apiRoute: string
 }
