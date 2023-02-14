@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { GetAllStorePortalNetworkLogs } from "./DashboardTypes";
 import DashboardLogs from "./DashboardLogs";
 import DashboardSearch from "./DashboardSearch";
-import { GETAllStorePortalNetworkLog } from "../../utils/FetchJson";
+//import { GETAllStorePortalNetworkLog } from "../../utils/FetchJson";
 
 function Dashboard(){
     const [logs, setLogs] = useState<GetAllStorePortalNetworkLogs>();
-    useEffect(() => {
+    /*useEffect(() => {
         GETAllStorePortalNetworkLog(setLogs);
-    }, []);
+    }, []);*/
 
     return (
         <div className="container p-2">
@@ -16,7 +16,7 @@ function Dashboard(){
                 <DashboardSearch />
             </div>
             <div className="row">
-                <DashboardLogs data={logs?.data}/>
+                <DashboardLogs data={logs}/>
             </div>
         </div>
     );

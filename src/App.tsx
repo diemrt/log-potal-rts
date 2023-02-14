@@ -1,11 +1,11 @@
 import React from 'react';
-import Dashboard from './pages/Dashboard';
+import Sidebar from './components/Sidebar.Component/Sidebar.Component';
 
 function App() {
 
   return (
-    <div className='container p-4'>
-      <Dashboard />
+    <div className='flex flex-row'>
+      <Sidebar />
     </div>
   );
 }
