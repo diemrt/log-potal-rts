@@ -1,17 +1,20 @@
 {
     "data": [
         {
-            "id": "<guid>",
+            "id": "699741",
             "user": {
-                "id": "<guid>",
-                "name": ""
+                "label": "diego.martignoni@lemonpie.it",
+                "value": "diego.martignoni@lemonpie.it"
             },
             "http": {
-                "status": 200,
+                "status": {
+                    "label": "200 - OK",
+                    "value": 200
+                },
                 "method": "GET",
                 "url": "http://localhost:5000/api/v2/storeportal?name=boh",
-                "request": "<json>",
-                "response": "<json>"
+                "request": {},
+                "response": {"data":[]}
             }
         }
     ],
