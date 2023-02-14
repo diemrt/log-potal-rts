@@ -1,12 +1,10 @@
-import { Type } from "typescript"
-
-export type MultipleResponseType = {
+export type MultipleResponseType<Type> = {
     data: Type,
     page: number,
     pages: number,
     count: number
 };
 
-export type SingoleResponseType = {
+export type SingoleResponseType<Type> = {
     data: Type
 }
