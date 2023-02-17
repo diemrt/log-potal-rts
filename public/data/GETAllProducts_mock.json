@@ -3,17 +3,21 @@
         {
             "name": "Envelop (dev)",
             "position": 1,
-            "apiRoute": "/envelop-dev"
+            "apiRoute": "/envelop-dev",
+            "company": "lemonpie"
         },
         {
             "name": "Envelop (prod)",
             "position": 3,
-            "apiRoute": "/envelop-prod"
+            "apiRoute": "/envelop-prod",
+            "company": "abenergie"
+            
         },
         {
             "name": "Envelop (test)",
             "position": 2,
-            "apiRoute": "/envelop-test"
+            "apiRoute": "/envelop-test",
+            "company": "abenergie"
         }
     ],
     "page": 0,

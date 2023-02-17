@@ -16,7 +16,8 @@ export function useGETAllExternalProducts() {
             return {
                 apiRoute: exi.apiRoute,
                 name: exi.name,
-                position: exi.position
+                position: exi.position,
+                company: exi.company
             }
         }) as Product[];
         seProducts(mappedProducts);
