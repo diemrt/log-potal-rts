@@ -1,7 +1,7 @@
+import { UseProductsResultType } from "../../types/AppServices.Type";
 import SidebarProductSelect from "./SidebarProductSelect.Component";
-import { SidebarProps } from "./SiedbarProps.Type";
 
-export default function SidebarHeader(props: SidebarProps){
+export default function SidebarHeader(props: {useProduct: UseProductsResultType}){
 
     return (
         <div className="flex flex-col gap-12">
@@ -11,7 +11,7 @@ export default function SidebarHeader(props: SidebarProps){
             </div>
             <div className="flex flex-col gap-5">
                 <label className="text-slate-700 text-xs font-bold">PRODOTTO</label>
-                <SidebarProductSelect {...props} />
+                <SidebarProductSelect useProduct={props.useProduct} />
             </div>
         </div>
     );
