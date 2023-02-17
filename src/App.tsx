@@ -1,40 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import Sidebar from './components/Sidebar.Components/Sidebar.Component';
-import { SidebarProps } from './components/Sidebar.Components/SiedbarProps.Type';
-import { Product } from './types/Common.Type';
+import useGetProductSelector from "./services/appService";
 
 function App() {
-  let [products, setProducts] = useState<Product[] | undefined>();
-  let [currentProduct, setCurrentProduct] = useState<Product>();
-  let sidebarProps: SidebarProps = {
-    products: products,
-    currentProduct: currentProduct,
-    setProductsCallback: setProducts,
-    setCurrentProductCallback: setCurrentProduct
-  }
-
-  useEffect(() => {
-    setProducts([
-      {
-        name: "Store Portal (dev)",
-        apiRoute: "/envelop-dev"
-      },
-      {
-        name: "Envelop (prod)",
-        apiRoute: "/envelop-prod"
-      },
-      
-    ]);
-    setCurrentProduct({
-      name: "Store Portal (dev)",
-      apiRoute: "/envelop-prod"
-    })
-  });
+  let {current, dynamicList, newCurrent} = useGetProductSelector();
 
   return (
-    <div className='flex flex-row'>
-      <Sidebar {...sidebarProps} />
-      {currentProduct?.name}
+    <div className='flex flex-col'>
+      <small>{typeof current === "undefined" ? 'Loading...' : 'Success'}</small>
+      <h1><b>{current?.positionNumber}. {current?.name} - {current?.apiRoute}</b></h1>
+      {dynamicList?.map(p => <button onClick={() => newCurrent(p)}>{p.positionNumber}. {p.name} - {p.apiRoute}</button>)}
     </div>
   );
 }

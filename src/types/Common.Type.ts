@@ -4,5 +4,6 @@ export type GenericItem = {
 }
 export type Product = {
     name: string,
-    apiRoute: string
+    apiRoute: string,
+    positionNumber: number
 }

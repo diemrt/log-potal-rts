@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "name": "Envelop (dev)",
+            "positionNumber": 1,
+            "apiRoute": "/envelop-dev"
+        },
+        {
+            "name": "Envelop (prod)",
+            "positionNumber": 3,
+            "apiRoute": "/envelop-prod"
+        },
+        {
+            "name": "Envelop (test)",
+            "positionNumber": 2,
+            "apiRoute": "/envelop-test"
+        }
+    ],
+    "page": 0,
+    "pages": 0,
+    "count": 0
+}
