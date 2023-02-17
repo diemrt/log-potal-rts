@@ -13,7 +13,7 @@ export function useGetAllProducts() {
             return {
                 apiRoute: product.apiRoute,
                 name: product.name,
-                positionNumber: product.positionNumber
+                position: product.position
             }
         }) as Product[];
         setMapProducts(mappedProducts);
