@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Product } from "../../types/Common.Type";
+import { Product } from "../../types/Entities.Type";
 import { GetAllProductsResponseType } from "../../types/response/ProductsResponse.Type";
 import useHttpGetAllRequest from "../httpRequest";
 

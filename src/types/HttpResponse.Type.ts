@@ -9,7 +9,9 @@ export type SingoleResponseType<Type> = {
     data: Type
 }
 
-export type ApiResponseStatusType = {
+export type HttpGetAllResponseType<Type> = [MultipleResponseType<Type> | undefined, boolean];
+
+export type HttpResponseStatusType = {
     label: 'LOADING' | 'SUCCESS',
     isLoading: boolean
 }

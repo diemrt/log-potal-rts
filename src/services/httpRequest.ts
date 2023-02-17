@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { ApiResponseStatusType, MultipleResponseType } from "../types/ApiResponse.Type";
+import { HttpResponseStatusType, HttpGetAllResponseType, MultipleResponseType } from "../types/HttpResponse.Type";
 
-export default function useHttpGetAllRequest<Type>(url: string) : [MultipleResponseType<Type> | undefined, boolean] {
+export default function useHttpGetAllRequest<Type>(url: string) : HttpGetAllResponseType<Type> {
 
     let [result, setResult] = useState<MultipleResponseType<Type> | undefined>();
-    let [status, setStatus] = useState<ApiResponseStatusType>({label: 'LOADING', isLoading: true});
+    let [status, setStatus] = useState<HttpResponseStatusType>({label: 'LOADING', isLoading: true});
 
     useEffect(() => {
         fetch(url)

@@ -5,8 +5,3 @@ export type GenericItem = {
 export type SortableItem = {
     position: number
 }
-
-export type Product = SortableItem & {
-    name: string,
-    apiRoute: string
-}

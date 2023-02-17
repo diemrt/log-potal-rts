@@ -1,4 +1,4 @@
-import { SortableItem } from "../types/Common.Type";
+import { SortableItem } from "../types/Generic.Type";
 
 export function updateSelectInput(
     newest: SortableItem, //the newest value to set

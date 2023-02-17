@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Product } from "../types/Common.Type";
+import { UseProductsResultType } from "../types/AppServices.Type";
+import { Product } from "../types/Entities.Type";
 import { updateSelectInput } from "../utils/selectInputUtils";
 import { useGETAllExternalProducts } from "./api/productsClient";
 
-export default function useProduct(): [Product | undefined, Product[] | undefined,  (newItem: Product) => void]{
+export default function useProduct(): UseProductsResultType{
 
     let {products, isLoading} = useGETAllExternalProducts();
     let [current, setCurrent] = useState<Product>();

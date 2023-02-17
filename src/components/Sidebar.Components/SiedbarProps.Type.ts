@@ -1,4 +1,4 @@
-import { Product } from "../../types/Common.Type"
+import { Product } from "../../types/Entities.Type"
 
 export type SidebarProps = {
     products: Product[] | undefined,
