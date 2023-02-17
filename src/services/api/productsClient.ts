@@ -12,15 +12,17 @@ export function useGETAllExternalProducts() {
     let [products, seProducts] = useState<Product[] | undefined>();
     
     useEffect(() => {
-        const mappedProducts: Product[] = externalProducts?.data.map(exi => {
-            return {
-                apiRoute: exi.apiRoute,
-                name: exi.name,
-                position: exi.position,
-                company: exi.company
-            }
-        }) as Product[];
-        seProducts(mappedProducts);
+        setTimeout(() => {
+            const mappedProducts: Product[] = externalProducts?.data.map(exi => {
+                return {
+                    apiRoute: exi.apiRoute,
+                    name: exi.name,
+                    position: exi.position,
+                    company: exi.company
+                }
+            }) as Product[];
+            seProducts(mappedProducts);
+        }, 300);
     },[externalProducts])
 
     return {products, isLoading};
