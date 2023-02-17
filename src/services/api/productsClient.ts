@@ -1,23 +1,25 @@
 import { useEffect, useState } from "react";
 import { Product } from "../../types/Common.Type";
 import useHttpGetAllRequest from "../httpRequest";
+
+
 const REMOTE_UTL = '/data/GETAllProducts_mock.json';
 
-export function useGetAllProducts() {
+export function useGETAllExternalProducts() {
 
-    const {result, isLoading} = useHttpGetAllRequest<Product>(REMOTE_UTL);
-    let [products, setMapProducts] = useState<Product[] | undefined>();
+    const [externalProducts, isLoading] = useHttpGetAllRequest<Product>(REMOTE_UTL);
+    let [products, seProducts] = useState<Product[] | undefined>();
     
     useEffect(() => {
-        const mappedProducts: Product[] = result?.data.map(product => {
+        const mappedProducts: Product[] = externalProducts?.data.map(product => {
             return {
                 apiRoute: product.apiRoute,
                 name: product.name,
                 position: product.position
             }
         }) as Product[];
-        setMapProducts(mappedProducts);
-    },[result])
+        seProducts(mappedProducts);
+    },[externalProducts])
 
     return {products, isLoading};
 }

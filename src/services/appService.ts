@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Product } from "../types/Common.Type";
 import { updateSelectInput } from "../utils/selectInputUtils";
-import { useGetAllProducts } from "./api/productsService";
+import { useGETAllExternalProducts } from "./api/productsClient";
 
-export default function useProduct(){
+export default function useProduct(): [Product | undefined, Product[] | undefined,  (newItem: Product) => void]{
 
-    let {products, isLoading} = useGetAllProducts();
+    let {products, isLoading} = useGETAllExternalProducts();
     let [current, setCurrent] = useState<Product>();
     let [dynamicList, setDinamycList] = useState<Product[] | undefined>(products);
     const updateCurrent = (newItem: Product) => {
@@ -21,6 +21,6 @@ export default function useProduct(){
         }
     },[products, isLoading])
 
-    return {current, dynamicList, updateCurrent};
+    return [current, dynamicList, updateCurrent];
 
 }
