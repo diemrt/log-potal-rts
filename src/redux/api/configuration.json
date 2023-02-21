@@ -1,0 +1,12 @@
+{
+    "env": "development",
+    "endPoints": {
+        "development": {
+            "host": "/",
+            "port": "",
+            "protocol": "",
+            "prefix": "",
+            "version": ""
+        }
+    }
+}
