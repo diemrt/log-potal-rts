@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { UseProductsResultType } from "../types/AppServices.Type";
 import { Product } from "../types/Entities.Type";
 import { updateSelectInput } from "../utils/selectInputUtils";
-import { useGETAllExternalProducts } from "./api/productsClient";
+import { useGETAllExternalProducts } from "./api/products.client";
 
 export default function useProduct(): UseProductsResultType{
 

@@ -1,4 +1,4 @@
-import Sidebar from "./components/Sidebar.Components/Sidebar.Component";
+import Sidebar from "./components/Sidebar/Sidebar.component";
 import useProduct from "./services/appService";
 
 function App() {

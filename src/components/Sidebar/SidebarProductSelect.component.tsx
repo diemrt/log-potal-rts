@@ -1,6 +1,6 @@
 import { UseProductsResultType } from "../../types/AppServices.Type";
-import SelectInputComponent from "../SelectInput.Component";
-import SidebarProductsCollapse from "./SidebarProductsCollapse.Component";
+import SelectInputComponent from "../form/SelectInput/SelectInput.component";
+import SidebarProductsCollapse from "./SidebarProductsCollapse.component";
 
 export default function SidebarProductSelect(props: {useProduct: UseProductsResultType}){
     let [current, list, updateList] = props.useProduct;

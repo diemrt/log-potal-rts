@@ -1,5 +1,5 @@
 import { UseProductsResultType } from "../../types/AppServices.Type";
-import SidebarProductSelect from "./SidebarProductSelect.Component";
+import SidebarProductSelect from "./SidebarProductSelect.component";
 
 export default function SidebarHeader(props: {useProduct: UseProductsResultType}){
 
